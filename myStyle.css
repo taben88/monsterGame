@@ -1,0 +1,80 @@
+#main{
+    height: 100vh;
+    display: flex;
+    align-content: stretch;
+}
+
+#victory{
+    z-index: -2;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}
+
+#background{
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+.field{
+    background-color: #938cb1;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 15%;
+    padding: 1%;
+}
+
+#left{
+    flex-grow: 1;
+    padding-right: 0;
+}
+
+#center{
+    flex-grow: 0;
+    margin: auto;
+}
+
+#right{
+    flex-grow: 1;
+    float: right;
+    padding-left: 0;
+}
+
+#footer{
+    font-family: "Amatic SC";
+    background-color: #2d2d2d;
+    color: #fb9318;
+    padding: 3vh 2vh 2vh 3vh;
+    text-align: justify;
+    text-align-last: left;
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    background-color: #938cb1;
+    border: none;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+button:hover{
+    background-color: #fb9318;
+}
+
+button img{
+    visibility: hidden;
+}
+
+#bed{
+    width: 46%;
+}

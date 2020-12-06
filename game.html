@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="myStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <img src="assets/title.png" id="victory" onclick="newGame()">
+        <img src="assets/background.png" id="background">
+        <div id="left" class="container">
+            <div class="field"><img id="mon4" src="" alt=""></div>
+            <div class="field"><img id="mon3" src="" alt=""></div>
+        </div>
+        
+        <div id="center" class="container">
+            <div class="row">
+                <button onclick="reveal(this.firstChild); itemArea.itemFields[0].onClick()"><img id="item1" src="" alt=""></button>
+                <button onclick="reveal(this.firstChild); itemArea.itemFields[1].onClick()"><img id="item2" src="" alt=""></button>
+            </div>
+            <div class="row">
+                <button onclick="reveal(this.firstChild); itemArea.itemFields[2].onClick()"><img id="item3" src="" alt=""></button>
+                <img src="assets/kid.png" alt="bed" id="bed">
+                <button onclick="reveal(this.firstChild); itemArea.itemFields[3].onClick()"><img id="item4" src="" alt=""></button>
+            </div>
+            <div class="row">
+                <button onclick="reveal(this.firstChild); itemArea.itemFields[4].onClick()"><img id="item5" src="" alt=""></button>
+                <button onclick="reveal(this.firstChild); itemArea.itemFields[5].onClick()"><img id="item6" src="" alt=""></button>
+            </div>
+        </div>
+        
+        <div id="right" class="container">
+            <div class="field"><img id="mon1" src="" alt=""></div>
+            <div class="field"><img id="mon2" src="" alt=""></div>
+        </div>
+    </div>
+    <div id="footer">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper dignissim cras tincidunt lobortis feugiat. Purus semper eget duis at tellus at. Nisi est sit amet facilisis magna etiam tempor orci eu. Et egestas quis ipsum suspendisse. Praesent elementum facilisis leo vel. Leo a diam sollicitudin tempor. Quis viverra nibh cras pulvinar mattis nunc sed blandit. Proin fermentum leo vel orci porta. Nisi vitae suscipit tellus mauris a diam maecenas sed. Ut ornare lectus sit amet. Porttitor massa id neque aliquam vestibulum. Consectetur lorem donec massa sapien faucibus et molestie. Ac tortor vitae purus faucibus ornare suspendisse sed nisi. Sed ullamcorper morbi tincidunt ornare massa eget. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Metus dictum at tempor commodo ullamcorper a. Accumsan tortor posuere ac ut consequat. Erat pellentesque adipiscing commodo elit at imperdiet dui. Velit dignissim sodales ut eu sem integer vitae.
+    </div>
+    <script src="myScript.js"></script>
+</body>
+</html>

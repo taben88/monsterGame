@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-size: 1.2em;
+    background-image: url('assets/footer.jpg');
 }
 
 #main{
@@ -15,9 +16,9 @@ body{
 #victory{
     z-index: -2;
     position: absolute;
-    width: 60%;
-    left: 25%;
+    left: 40%;
     top: 10%;
+    visibility: hidden;
 }
 
 #background{
@@ -28,7 +29,7 @@ body{
 }
 
 .field{
-    background-color: #938cb1;
+    border: solid 5px #5f5f5f;
     height: 200px;
     width: 200px;
     border-radius: 50%;
@@ -55,8 +56,7 @@ body{
 
 #footer{
     font-family: "Amatic SC";
-    background-color: #2d2d2d;
-    color: #fb9318;
+    color: #02a85c;
     padding: 3vh 2vh 2vh 3vh;
     text-align: justify;
     text-align-last: left;
@@ -67,7 +67,6 @@ body{
     max-height: 50px;
     margin-right: 50px;
     border-radius: 10%;
-    background-color: #938cb1;
 }
 
 .row{
@@ -76,7 +75,7 @@ body{
 }
 
 button{
-    background-color: #938cb1;
+    background-color: #ec2248;
     border: none;
     height: 120px;
     width: 120px;
@@ -85,7 +84,7 @@ button{
 }
 
 button:hover{
-    background-color: #fb9318;
+    background-color: #ae0d2c;
 }
 
 button img{

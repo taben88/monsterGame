@@ -94,6 +94,7 @@ const monsterArea = {
         for (let i = 0; i < (monsterFields.length) + 1; i++) {
             if (i == 4) {
                 console.log("Vesztettél!");
+                document.getElementById("victory").style.visibility = "visible";
                 document.getElementById("victory").style.zIndex = 2;
                 break;
             }
@@ -124,6 +125,7 @@ const monsterArea = {
         if (monsterFields.every(monsterField.prototype.isEmpty)) {
             console.log("Victory");
             document.getElementById("victory").style.zIndex = 2;
+            document.getElementById("victory").style.visibility = "visible";
         };
     }
 };
@@ -190,6 +192,7 @@ function newGame(){
     monsterArea.populate();
     itemArea.populate();
     document.getElementById("victory").style.zIndex = -2;
+    document.getElementById("victory").style.visibility = "hidden";
 };
 
 newGame();

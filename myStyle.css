@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-size: 1.2em;
 }
 
 #main{
@@ -14,15 +15,15 @@ body{
 #victory{
     z-index: -2;
     position: absolute;
-    width: 50%;
+    width: 60%;
     left: 25%;
-    top: 25%;
+    top: 10%;
 }
 
 #background{
     z-index: -1;
     width: 100%;
-    min-height: 100%;
+    max-height: 100vh;
     position: absolute;
 }
 
@@ -59,6 +60,14 @@ body{
     padding: 3vh 2vh 2vh 3vh;
     text-align: justify;
     text-align-last: left;
+}
+
+#footer img{
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 50px;
+    border-radius: 10%;
+    background-color: #938cb1;
 }
 
 .row{

@@ -93,11 +93,11 @@ const monsterArea = {
         let monsterFields = this.monsterFields;
         for (let i = 0; i < (monsterFields.length) + 1; i++) {
             if (i == 4) {
-                console.log("You lost the game!");
+                console.log("Vesztettél!");
+                document.getElementById("victory").style.zIndex = 2;
                 break;
             }
             else if (monsterFields[i].isEmpty()) {
-                console.log(i, "is empty");
                 let no = monsterFields[i].no;
                 monsterFields[i].occupant = monsters[Math.floor(Math.random() * 4)];
                 let occupant = monsterFields[i].occupant;
@@ -122,7 +122,7 @@ const monsterArea = {
     checkWin() {
         let monsterFields = this.monsterFields;
         if (monsterFields.every(monsterField.prototype.isEmpty)) {
-            console.log("All empty");
+            console.log("Victory");
             document.getElementById("victory").style.zIndex = 2;
         };
     }
@@ -144,14 +144,15 @@ const itemArea = {
     shuffle() {
         //Shuffle items
         let itemFields = this.itemFields
-        for (let i = itemFields.length - 1; i > 0; i--) {
+        for (let i = itemFields.length - 1; i > -1; i--) {
             let j = Math.floor(Math.random() * (i + 1));
             [itemFields[i], itemFields[j]] = [itemFields[j], itemFields[i]];
         };
         //Refresh images
-        for (let i = 0; i < items.length; i++) {
+        for (let i = 0; i < itemFields.length; i++) {
             let occupant = itemFields[i].occupant;
-            document.getElementById(`item${i + 1}`).setAttribute("src", `assets/${occupant.img}`);
+            document.getElementById(`item${i}`).setAttribute("src", `assets/${occupant.img}`);
+            console.log(document.getElementById(`item${i}`).src);
         }
     },
 
@@ -159,15 +160,14 @@ const itemArea = {
     populate() {
         let itemFields = this.itemFields
         for (let i = 0; i < items.length; i++) {
-            console.log(i, "is empty");
             itemFields[i].occupant = items[i];
             let occupant = itemFields[i].occupant;
-            document.getElementById(`item${i + 1}`).setAttribute("src", `assets/${occupant.img}`);
-        }
+            document.getElementById(`item${i}`).setAttribute("src", `assets/${occupant.img}`);
+        };
         this.shuffle();
         for (let i = 0; i < items.length; i++) {
-            reveal(document.getElementById(`item${i + 1}`));
-        }
+            reveal(document.getElementById(`item${i}`));
+        };
     },
 };
 
@@ -184,6 +184,9 @@ function reveal(element){
 //Starts/resets the game
 function newGame(){
     time = 0;
+    for (const i of monsterArea.monsterFields) {
+        i.setEmpty();
+    };
     monsterArea.populate();
     itemArea.populate();
     document.getElementById("victory").style.zIndex = -2;
